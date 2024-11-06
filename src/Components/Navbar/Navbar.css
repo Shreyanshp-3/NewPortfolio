@@ -1,0 +1,34 @@
+/* Prevent horizontal scrolling globally */
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Ensure the container doesn't overflow */
+.container-fluid {
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100vw; /* Ensure the container doesn't exceed viewport width */
+}
+
+/* Navbar Styles */
+nav {
+  width: 100vw; /* Ensure the navbar takes full width */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Mobile Menu: Ensure it fits within the screen */
+.mobile-menu {
+  width: 100vw; /* Make sure mobile menu does not overflow */
+  max-width: 100vw; /* Enforce maximum width */
+  box-sizing: border-box; /* Include padding in width calculations */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Mobile Menu Transformation */
+.md:hidden {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
